@@ -2,3 +2,13 @@ ner.ipynb
 vid1.ipynb
 vid11.ipynb
 custom_named_entity_recog.py
+hp_ner/config.cfg
+hp_ner/meta.json
+hp_ner/tokenizer
+hp_ner/ner/cfg
+hp_ner/ner/model
+hp_ner/ner/moves
+hp_ner/vocab/key2row
+hp_ner/vocab/lookups.bin
+hp_ner/vocab/strings.json
+hp_ner/vocab/vectors
