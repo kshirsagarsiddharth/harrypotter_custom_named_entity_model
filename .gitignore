@@ -13,3 +13,4 @@ hp_ner/vocab/lookups.bin
 hp_ner/vocab/strings.json
 hp_ner/vocab/vectors
 hp.txt
+hp_data.json
