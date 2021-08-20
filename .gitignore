@@ -12,3 +12,4 @@ hp_ner/vocab/key2row
 hp_ner/vocab/lookups.bin
 hp_ner/vocab/strings.json
 hp_ner/vocab/vectors
+hp.txt
