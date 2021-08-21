@@ -1,4 +1,5 @@
 # harrypotter_custom_named_entity_recognition
+![image](https://user-images.githubusercontent.com/48590801/130318632-59fdbfdc-e9df-4ca4-a424-ca4b50afeced.png)
 
 This project trains a spacy domain specific model on harry potter text, this allows the model to detect named entity in the data which pertains to harry potter 
 literature.
