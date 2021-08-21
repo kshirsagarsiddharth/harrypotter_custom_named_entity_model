@@ -1,7 +1,6 @@
 ner.ipynb
 vid1.ipynb
 vid11.ipynb
-custom_named_entity_recog.py
 hp_ner/config.cfg
 hp_ner/meta.json
 hp_ner/tokenizer
