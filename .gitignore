@@ -11,9 +11,6 @@ hp_ner/vocab/key2row
 hp_ner/vocab/lookups.bin
 hp_ner/vocab/strings.json
 hp_ner/vocab/vectors
-hp.txt
-hp_data.json
-hp_training_data.json
 hp_ner_model/config.cfg
 hp_ner_model/meta.json
 hp_ner_model/tokenizer
@@ -24,3 +21,4 @@ hp_ner_model/vocab/key2row
 hp_ner_model/vocab/lookups.bin
 hp_ner_model/vocab/strings.json
 hp_ner_model/vocab/vectors
+alice_in_wonder_land.txt
