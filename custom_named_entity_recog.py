@@ -104,4 +104,37 @@ with open('hp.txt','r', encoding='utf-8') as f:
                 hits.append(result)
         ie_data[chapter_num] = hits 
 
+def train_spacy(data, iterations):
+    from tqdm.notebook import tqdm 
+    import random
+    TRAIN_DATA = data 
+    TRAIN_DATA2 = []
+    for val  in TRAIN_DATA:
+        if val:
+            TRAIN_DATA2.append(val)
+    
+    nlp = spacy.blank('en')
+    if "ner" not in nlp.pipe_names:
+        ner = nlp.add_pipe('ner', last=True) 
+    
+    for _, annotations in TRAIN_DATA2:
+        for ent in annotations.get('entities'):
+            ner.add_label(ent[2]) 
+    other_pipes = [pipe for pipe in nlp.pipe_names if pipe != 'ner'] 
+    if len(other_pipes) == 0:
+        optimizer = nlp.begin_training() 
+        for itn in tqdm(range(iterations)):
+            print('starting iteration:' + str(itn))
+            random.shuffle(TRAIN_DATA2)
+            losses = {} 
+            from spacy.training.example import Example 
+
+            for batch in spacy.util.minibatch(TRAIN_DATA2, size = 256):
+                for text, annotations in batch: 
+                    doc = nlp.make_doc(text)
+                    example = Example.from_dict(doc, annotations)
+                    nlp.update([example], losses=losses, drop = 0.3, sgd = optimizer)
+    return nlp 
+
+
 
